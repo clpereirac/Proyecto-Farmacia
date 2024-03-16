@@ -15,7 +15,7 @@
             </div>
             <div class="perfil">
                 <img src="./img/foto-perfil.png" alt="img">
-                <H2>Claudia</H2>
+                <h2>Claudia</h2>
             </div>
 
             <div class="almacen">
