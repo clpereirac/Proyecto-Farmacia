@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Farmacia</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <div class="principal">
         <div class="opciones">
             <div class="farmacia">
-                <img src="" alt="">
+                <img src="./img/perfil.jpeg" alt="img">
                 <h2>FARMACIA</h2>
             </div>
             <div class="perfil">
-                <img src="" alt="">
+                <img src="./img/foto-perfil.png" alt="img">
                 <H2>Claudia</H2>
             </div>
 
