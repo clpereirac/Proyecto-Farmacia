@@ -52,7 +52,7 @@ session_destroy();
 </div>
 </div> 
 </body>
-<script src="js/login.js"></script> //ojo este js no lo creamos al orincipio
+<script src="js/login.js"></script> //ojo este js no lo creamos al rincipio
 </html>
 <?php
 }
