@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farmacia</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./controllers/script.js"></script>
 </head>
 <body>
     <div class="principal">
+        <!-- Columna de opciones -->
         <div class="opciones">
             <div class="farmacia">
                 <img src="./img/perfil.jpeg" alt="img">
@@ -20,11 +22,11 @@
 
             <div class="almacen">
                 <h2>Almacen</h2>
-                <ul>
-                    <li>Lista Producto</li>
-                    <li>Procesar compra</li>
-                    <li>Evaluacion de productos</li>
-                </ul>
+                <!-- <div><a href="javascript:cargarContenido('./model/productos.php')">Lista Producto</a></div> -->
+                <div onclick="options()" id="productos">Productos</div>
+                <div><a href="">Procesar compra</a></div>
+                <div><a href="">Evaluacion de producto</a></div>
+                <div><a href="javascript:mostrarMedicamentos()">Información de productos</a></div>
             </div>
         </div>
 
@@ -33,15 +35,14 @@
                 <ul>
                     <li>Home</li>
                     <li>Contactos</li>
-                    
                 </ul>
                 <p>
                     <a href="">Cerrar sesion</a>
                 </p>
             </div>
 
-            <div class="menu">
-                    
+            <div class="menu" id="menu">
+                
             </div>
 
             <div class="footer">
@@ -51,3 +52,4 @@
     </div>
 </body>
 </html>
+

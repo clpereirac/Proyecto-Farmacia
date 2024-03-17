@@ -10,8 +10,12 @@ body{
 }
 
 .principal{
-    height: 100%;
+    height: 100vh;
     display: flex;
+    /* background: rgba(17, 17, 17, 0.718); */
+    width: 100%;
+    background: rgb(191, 195, 199);
+    /* height: 100vh; */
 }
 
 .principal .opciones{
@@ -23,6 +27,8 @@ body{
     border-right: 1px solid #ccc;
     /* justify-content: center; */
     align-items: center;
+    background: rgba(0, 0, 0, 0.653);
+    gap: 20px;
 }
 
 .principal .opciones .farmacia{
@@ -51,3 +57,274 @@ body{
     border-radius: 50%;
 }
 
+.principal .opciones .almacen{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.principal .opciones .almacen ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.principal .opciones .almacen div{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    background: #1d5ea9ac;
+    border-radius: 5px;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.principal .opciones .almacen div a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.container .navigation{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    width: 100%;
+    background: rgb(244, 238, 226);
+    
+}
+.container .navigation ul{
+    display: flex;
+    padding: 10px;
+    margin-right: 20px;
+    gap: 20px;
+}
+
+.container .navigation ul li{
+    text-decoration: none;
+}
+
+.container .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #f5f5f5;
+    width: 100%;
+    height: 80px;
+    border-top: 1px solid #ccc;
+
+}
+
+.container .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    height: 100vh;
+}
+
+
+.contaniner-productos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.contaniner-productos .tabla-productos{
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.contaniner-productos .tabla-productos th, td{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #696666d0;
+    border-radius: 3px;
+}
+
+
+.contaniner-productos .tabla-productos .btn_editar{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #12ce3e;
+    color: white;
+    cursor: pointer;
+}
+.contaniner-productos .tabla-productos .btn_eliminar{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #ee1616;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+
+/* BUSCAR  */
+.buscar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+    gap: 10px;
+    width: 400px;
+    margin-top: 1.5rem;
+}
+
+.buscar input{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.buscar button{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #4f9bf2;
+    cursor: pointer;
+}
+
+#producto{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+
+
+.menu .formulario-agragar-prductos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* formulario  */
+.menu .formulario-agragar-prductos form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+}
+.menu .formulario-agragar-prductos form div input{
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.menu .formulario-agragar-prductos form .botom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .formulario-agragar-prductos form  .btn_registrar{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #4f9bf2;
+    cursor: pointer;
+    width: 80px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/* CARD DE PRODUCTOS  */
+.menu .container-informacion-prod{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+    width: 100%;
+}
+
+.menu .container-informacion-prod .container-card{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.menu .container-informacion-prod .container-card .card-prod{
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 300px;
+    border: 1px solid #7d8091;
+    border-radius: 5px;
+    background: white;
+    overflow-y: auto;
+}
+
+.menu .container-informacion-prod .card-prod .datos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+    height: 80%;
+}
+
+.menu .container-informacion-prod .card-prod img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.menu .container-informacion-prod .buscar-2{
+    padding: 15px;
+    display: flex;
+    background: rgb(6, 159, 6);
+    border-radius: 4px;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.menu .container-informacion-prod .buscar-2 input{
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    width: 80%;
+}
+
+.menu .container-informacion-prod .buscar-2 button{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #4f9bf2;
+    cursor: pointer;
+    color: white;
+}
