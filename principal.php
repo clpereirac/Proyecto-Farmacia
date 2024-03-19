@@ -24,8 +24,9 @@
                 <h2>Almacen</h2>
                 <!-- <div><a href="javascript:cargarContenido('./model/productos.php')">Lista Producto</a></div> -->
                 <div onclick="options()" id="productos">Productos</div>
+                <div><a href="javascript:cargarContenido('./model/form-registro_cliente.php')">Registrar cliente</a></div>
                 <div><a href="">Procesar compra</a></div>
-                <div><a href="">Evaluacion de producto</a></div>
+                <div><a href="javascript:cargarContenido('./model/lotes_productos.php')">Lostes de productos</a></div>
                 <div><a href="javascript:mostrarMedicamentos()">Información de productos</a></div>
             </div>
         </div>
@@ -41,6 +42,7 @@
                 </p>
             </div>
 
+            <!-- Aqui cargamos todos los archivos -->
             <div class="menu" id="menu">
                 
             </div>

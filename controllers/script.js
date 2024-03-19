@@ -95,8 +95,48 @@ function deleteProducto(id){
 
 
 
-
 // Funcion para mostrar la informacion de los medicamentos
 function mostrarMedicamentos(){
   cargarContenido("./model/informacion_productos.php");
+}
+
+
+
+
+function busqueda(){
+  
+  var elemento_buscar = document.getElementById("nombreProducto").value;
+  cargarContenido("./model/informacion_productos.php?buscar=" + elemento_buscar);
+
+}
+
+
+
+function desechar(id){
+
+  cargarContenido("./model/delete.php?id=" + id);
+
+  setTimeout(() =>{
+    cargarContenido("./model/lotes_productos.php");
+  }, 500);
+}
+
+
+
+
+
+
+//? PARTE DONDE SE REGISTRA LOS DATOS DEL CLIENTE
+function registrarCliente() {
+  var contenedor = document.getElementById("menu");
+  var formulario = document.getElementById("form-cliente");
+  var parametros = new FormData(formulario);
+
+  fetch("./model/registro_cliente.php", { method: "POST", body: parametros })
+    .then((response) => response.text())
+    .then((data) => (contenedor.innerHTML = data));
+
+  // setTimeout(() => {
+  //   cargarContenido("./model/productos.php");
+  // }, 1000);
 }

@@ -10,7 +10,7 @@
     <?php
     include('db.php');
 
-    $sql = "SELECT id, nombre, fotografia, descripcion, precio, stock, fecha_de_vencimiento, lote FROM productos";
+    $sql = "SELECT id, nombre, fotografia, descripcion, precio, stock, lote FROM productos";
 
     if (isset($_GET['buscar'])) {
         $buscar = $_GET['buscar'];
@@ -33,7 +33,6 @@
                     <th>Descripción</th>
                     <th>Precio</th>
                     <th>Stock</th>
-                    <th>Fecha de vencimiento</th>
                     <th>Lote</th>
                     <th>Operarciones</th>
                 </tr>
@@ -46,7 +45,6 @@
                         <td><?php echo $row["descripcion"]; ?></td>
                         <td><?php echo $row["precio"]; ?></td>
                         <td><?php echo $row["stock"]; ?></td>
-                        <td><?php echo $row["fecha_de_vencimiento"]; ?></td>
                         <td><?php echo $row["lote"]; ?></td>
                         <td>
                             <a href="javascript:update(<?php echo $row["id"] ?>)"><button class="btn_editar">Actualizar</button></a>

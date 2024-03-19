@@ -30,13 +30,17 @@
                 exit;
             }
     
-            $sql = "UPDATE productos  SET fotografia = '$fotografia', nombre = '$nombre', descripcion = '$descripcion', precio = $precio, stock = $stock, fecha_de_vencimiento = '$fecha_de_vencimiento', lote = '$lote' WHERE id = $id";
-
+            $sql = "UPDATE productos  SET fotografia = '$fotografia', nombre = '$nombre', descripcion = '$descripcion', precio = $precio, stock = $stock, lote = '$lote' WHERE id = $id";
+            
+            // para los lotes 
+            $sql_lotes = "UPDATE lotes_vencidos SET fecha_vencimiento = '$fecha_de_vencimiento' WHERE id_producto = $id";
+            
         }else{
-            $sql = "UPDATE productos SET nombre = '$nombre', descripcion = '$descripcion', precio = $precio, stock = $stock, fecha_de_vencimiento = '$fecha_de_vencimiento', lote = '$lote' WHERE id = $id";
+            $sql = "UPDATE productos SET nombre = '$nombre', descripcion = '$descripcion', precio = $precio, stock = $stock, lote = '$lote' WHERE id = $id";
+            $sql_lotes = "UPDATE lotes_vencidos SET fecha_vencimiento = '$fecha_de_vencimiento' WHERE id_producto = $id";
         }
     
-        if ($connect->query($sql) === TRUE) {
+        if ($connect->query($sql) === TRUE && $connect->query($sql_lotes) === TRUE) {
             echo "Se actualizó correctamente";
         } else {
             echo "Error: " . $sql . "<br>" . $connect->error;

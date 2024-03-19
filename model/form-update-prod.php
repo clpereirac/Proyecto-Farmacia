@@ -6,11 +6,11 @@
 
     // echo 'El id seleccionado es: ' .$id;
 
-    $sql = "SELECT * FROM productos WHERE id = $id";
+    // $sql = "SELECT * FROM productos WHERE id = $id";
+    $sql = "SELECT fotografia, nombre, descripcion, precio, stock, lote, l.fecha_vencimiento FROM productos p LEFT JOIN lotes_vencidos l ON p.id = l.id_producto WHERE p.id = $id AND l.id_producto = $id";
     $result = $connect->query($sql);
     $row = $result->fetch_assoc();
 ?>
-
 
 
 
@@ -43,14 +43,14 @@
         </div>
         <div>
             <label for="fecha_de_vencimiento">Fecha de vencimiento:</label>
-            <input type="date" name="fecha_de_vencimiento" value="<?php echo $row['fecha_de_vencimiento']; ?>">
+            <input type="date" name="fecha_de_vencimiento" value="<?php echo $row['fecha_vencimiento']; ?>">
         </div>
         <div>
             <label for="lote">Lote:</label>
             <input type="text" name="lote" value="<?php echo $row['lote']; ?>">
         </div>
         <div class="botom">
-            <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
             <input type="hidden" name="fotografia_actual" value="<?php echo $row['fotografia']; ?>">
             <button type="submit" class="btn_registrar">Actualizar</button>
         </div>
