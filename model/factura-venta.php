@@ -8,16 +8,11 @@ $sql_ventas = "SELECT * FROM ventas";
 if(isset($_GET['buscar'])){
     $buscar = $_GET['buscar'];
     
-    // $sql_ventas .= " WHERE id_cliente LIKE %$buscar% OR id_venta LIKE %$buscar%";
     $sql_ventas .= " WHERE id_cliente = $buscar";
 }
 
 $result_venta = $connect->query($sql_ventas);
 
-
-
-$id_cliente = 0;
-$id_producto = 0;
 
 ?>
 
