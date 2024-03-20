@@ -162,3 +162,21 @@ function procesarVenta(){
     cargarContenido("./model/factura-venta.php");
   }, 1000);
 }
+
+
+
+function cerrarSesion() {
+  window.location.href = '../cerrar_sesion.php';
+}
+
+
+
+
+function buscarFactura(){
+  
+  var elemento_buscar = document.getElementById("id_factura").value;
+
+  cargarContenido("./model/factura-venta.php?buscar=" + parseInt(elemento_buscar));
+
+}
+

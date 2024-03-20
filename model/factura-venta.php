@@ -4,10 +4,32 @@
 include('db.php');
 
 $sql_ventas = "SELECT * FROM ventas";
+
+if(isset($_GET['buscar'])){
+    $buscar = $_GET['buscar'];
+    
+    // $sql_ventas .= " WHERE id_cliente LIKE %$buscar% OR id_venta LIKE %$buscar%";
+    $sql_ventas .= " WHERE id_cliente = $buscar";
+}
+
 $result_venta = $connect->query($sql_ventas);
+
+
 
 $id_cliente = 0;
 $id_producto = 0;
+
+?>
+
+<div class="buscar-venta">
+        <label for="buscar">Buscar historial de venta</label>
+        <br>
+        <input type="number" name="nombre_producto" id="id_factura" placeholder="Buscar producto">
+        <button onclick="javascript:buscarFactura()">Buscar</button>
+</div>
+
+<?php
+
 while($row_venta = $result_venta->fetch_assoc()){ 
 
     $id_cliente = $row_venta['id_cliente'];
@@ -27,7 +49,7 @@ while($row_venta = $result_venta->fetch_assoc()){
 
     <div class="container-factura">
         <div class="titulo">
-            <img src="" alt="">
+            <img src="./img/lab_default.png" alt="">
             <h2>FACTURA DE VENTA</h2>
         </div>
 
@@ -36,6 +58,7 @@ while($row_venta = $result_venta->fetch_assoc()){
             <div class="detalles-venta">
                 <div class="detalles-cliente">
                     <h3>Información del cliente</h3>
+                    <p><strong>ID Cliente: </strong> <?php echo $row_cliente['id'] ?></p>
                     <p><strong>Nombre: </strong> <?php echo $row_cliente['nombre'] ?></p>
                     <p><strong>C.I.</strong>  <?php echo $row_cliente['CI'] ?></p>
                     <p><strong>Nro de compras: </strong>  <?php echo $row_cliente['numero_compras'] ?></p>
@@ -72,7 +95,7 @@ while($row_venta = $result_venta->fetch_assoc()){
                 <h2>Total</h2>
                 <p><strong>Pago inicial del cliente: </strong>  <?php echo $row_venta['monto_pago'] ?>$</p>
                 <p><strong>Subtotal: </strong> <?php echo $row_producto['precio'] * $row_venta['cantidad'] ?> $</p>
-                <p><strong>Descuento de: </strong> <?php echo $porcentaje ?>%: <?php echo $row_venta['descuento'] ?>$</p>
+                <p><strong>Descuento de: </strong> <?php echo intval($porcentaje) ?>%: <?php echo $row_venta['descuento'] ?>$</p>
                 <p><strong>Cambio: </strong>  <?php echo $row_venta['cambio'] ?>$</p>
                 <p><strong>Total Pagar: </strong>  <?php echo $row_venta['monto_total'] ?>$</p>
                 <p><strong>Vendedor: </strong> <?php echo $row_venta['vendedor'] ?></p>

@@ -23,7 +23,7 @@ $fecha_actual = date('Y-m-d');
             <select name="cliente" id="cliente">
                 <option value="">Seleccionar cliente</option>
                 <?php while ($row = $resultado_cliente->fetch_assoc()) { ?>
-                        <option value="<?php echo $row['id'] ?>"><?php echo $row['nombre'] ?></option>
+                        <option value="<?php echo $row['id'] ?>"><?php echo $row['id'] ?>: <?php echo $row['nombre'] ?></option>
                     <?php } ?>
             </select>
         </div>
@@ -36,7 +36,7 @@ $fecha_actual = date('Y-m-d');
             <select name="producto" id="producto">
                 <option value="">Seleccionar producto</option>
                 <?php while ($row_prod = $resultado_producto->fetch_assoc()) { ?>
-                        <option value="<?php echo $row_prod['id'] ?>"><?php echo $row_prod['nombre'] ?></option>
+                        <option value="<?php echo $row_prod['id'] ?>"><?php echo $row_prod['nombre'] ?>: <?php echo $row_prod['precio'] ?>$</option>
                     <?php } ?>
             </select>
         </div>
@@ -49,12 +49,13 @@ $fecha_actual = date('Y-m-d');
             <input type="text" name="vendedor" id="vendedor">
         </div>
         <div>
-            <label for="descuente">Descuento: </label>
-            <input type="number" name="descuento" id="descuento">%
+            <label for="descuente">Descuento: %</label>
+            <input type="number" name="descuento" id="descuento" placeholder="Descuento en 20%">%
         </div>
         <div>
             <label for="pago-cliente">Pago de cliente: </label>
-            <input type="number" name="pago-cliente" id="pago-cliete">Bs.
+            <h6>Su pago debe ser mayor al precio x cantidad</h6>
+            <input type="number" name="pago-cliente" id="pago-cliete">$.
         </div>
 
         <input type="submit" value="Procesar venta">
