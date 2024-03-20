@@ -136,7 +136,29 @@ function registrarCliente() {
     .then((response) => response.text())
     .then((data) => (contenedor.innerHTML = data));
 
-  // setTimeout(() => {
-  //   cargarContenido("./model/productos.php");
-  // }, 1000);
+  setTimeout(() => {
+    cargarContenido("./model/form-procesar-venta.php");
+  }, 1000);
+}
+
+
+
+
+
+
+
+//todo: PARTE DE PROCESAR UN VENTA 
+function procesarVenta(){
+
+  var contenedor = document.getElementById("menu");
+  var formulario = document.getElementById("form-venta");
+  var datos = new FormData(formulario);
+
+  fetch("./model/procesar-venta.php", { method: "POST", body: datos })
+    .then((response) => response.text())
+    .then((data) => (contenedor.innerHTML = data));
+
+  setTimeout(() => {
+    cargarContenido("./model/factura-venta.php");
+  }, 1000);
 }

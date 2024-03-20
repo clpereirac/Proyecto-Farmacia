@@ -25,16 +25,17 @@
                 <!-- <div><a href="javascript:cargarContenido('./model/productos.php')">Lista Producto</a></div> -->
                 <div onclick="options()" id="productos">Productos</div>
                 <div><a href="javascript:cargarContenido('./model/form-registro_cliente.php')">Registrar cliente</a></div>
-                <div><a href="">Procesar compra</a></div>
+                <div><a href="javascript:cargarContenido('./model/form-procesar-venta.php')">Procesar venta</a></div>
                 <div><a href="javascript:cargarContenido('./model/lotes_productos.php')">Lostes de productos</a></div>
                 <div><a href="javascript:mostrarMedicamentos()">Información de productos</a></div>
+                <div><a href="javascript:cargarContenido('model/factura-venta.php')">Detalles venta</a></div>
             </div>
         </div>
 
         <div class="container">
             <div class="navigation">
                 <ul>
-                    <li>Home</li>
+                    <li><a href="">Home</a></li>
                     <li>Contactos</li>
                 </ul>
                 <p>

@@ -14,19 +14,18 @@ body{
     display: flex;
     /* background: rgba(17, 17, 17, 0.718); */
     width: 100%;
-    background: rgb(216, 219, 221);
+    background: rgba(151, 232, 217, 0.366);
 }
 
 .principal .opciones{
     display: flex;
     flex-direction: column;
     width: 18%;
-    height: 100%;
-    background-color: #f5f5f5;
+    height: 100%;;
     border-right: 1px solid #ccc;
     /* justify-content: center; */
     align-items: center;
-    background: rgba(0, 0, 0, 0.653);
+    background: rgba(8, 2, 42, 0.819);
     gap: 20px;
 }
 
@@ -70,11 +69,26 @@ body{
 
 }
 
+select{
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
 .principal .opciones .almacen ul{
     display: flex;
     flex-direction: column;
     gap: 20px;
     text-decoration: none;
+}
+
+.principal .opciones .almacen #productos{
+    color: white;
+}
+
+.principal .opciones .almacen #productos:hover{
+    background: #08a0b1;
+    color: white;
 }
 
 .principal .opciones .almacen div{
@@ -108,18 +122,37 @@ body{
     padding: 10px;
     justify-content: space-between;
     width: 100%;
-    background: rgb(244, 238, 226);
+    background: rgba(2, 11, 91, 0.879);
     height: 8%;
 }
 .container .navigation ul{
+    list-style: none;
     display: flex;
     padding: 10px;
     margin-right: 20px;
     gap: 20px;
+    text-decoration: none;
+}
+
+.container .navigation p{
+    font-size: 1.2rem;
+}
+
+.container .navigation p a{
+    text-decoration: none;
+    color: rgb(250, 247, 247);
 }
 
 .container .navigation ul li{
     text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.container .navigation ul li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
 }
 
 .container .footer{
@@ -127,11 +160,16 @@ body{
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background: #f5f5f5;
+    background: #444450;
     width: 100%;
     height: 8%;
     border-top: 1px solid #ccc;
 
+}
+
+.container .footer p{
+    color: white;
+    font-size: 1.2rem;
 }
 
 .container .menu{
@@ -226,6 +264,7 @@ body{
     align-items: center;
     gap: 20px;
     padding: 20px;
+    background: rgba(244, 240, 240, 0.889);
 }
 
 /* formulario  */
@@ -294,7 +333,7 @@ body{
     height: 300px;
     border: 1px solid #7d8091;
     border-radius: 5px;
-    background: white;
+    background: rgba(255, 253, 253, 0.677);
     overflow-y: auto;
 }
 
@@ -404,4 +443,229 @@ body{
 
 .menu .lotes .lotes-riesgo table .lote-vigente{
     background: rgb(188, 243, 248);
+}
+
+
+
+
+
+
+/* FORMULARIO REGISTRO CLIENTE  */
+.container-cliente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .container-cliente:hover {
+    transform: translateY(-5px);
+  }
+  
+  .container-cliente h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+  }
+  
+  .container-cliente label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .container-cliente input[type="text"], .container-cliente input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  .container-cliente button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #5c3d8a;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .container-cliente button[type="submit"]:hover {
+    background-color: #4a2f68;
+  }
+
+
+
+
+
+  /* ESTYLES PROCESO DE VENTA  */
+  .container-venta {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Animación para el formulario */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+form {
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
+}
+
+
+
+
+
+
+/* Estilos para la factura */
+.container-factura{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.container-factura .titulo{
+    padding: 20px;
+    display: flex;
+    background: #3689e8;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container-factura .titulo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.container-factura .titulo h2{
+    color: white;
+}
+
+.container-factura .main{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #f7f9f9;
+    width: 100%;
+}
+
+.container-factura .main .detalles-venta{
+    display: flex;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.container-factura .main .detalles-venta .detalles-cliente{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 10px;
+    border: 1px solid black;
+    width: 50%;
+}
+
+.container-factura .main .detalles-venta .detalles-factura{
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid black;
+    width: 50%;
+}
+
+.container-factura .main .datos-producto{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.container-factura .main .datos-producto table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.container-factura .main  .pagos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 100%;
+    background: rgb(229, 227, 227);
 }
